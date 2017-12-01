@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebSocket Game</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/jAlert.css" rel="stylesheet">
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/jAlert-functions.min.js"></script>
+<script src="/js/jAlert.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/game.js"></script>
+</head>
+<body>
+	<div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-12 space-bottom10">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="from">Name?</label> <input type="text" id="from"
+							class="form-control" placeholder="enter your name...">
+					</div>
+					<button id="connect" class="btn btn-default" type="submit">Connect</button>
+					<button id="disconnect" class="btn btn-default" type="submit"
+						disabled="disabled">Disconnect</button>
+					<button id="computer" class="btn btn-default" type="submit">Computer</button>
+				</form>
+			</div>
+		</div>
+		<div class="row space-bottom10">
+			<form class="form-inline">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="matchId">Match Id</label> <input type="text" value=""
+							name="match" id="match" class="form-control" disabled>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-group">
+						<button id="send1" class="btn btn-default" type="submit">Rock</button>
+						<button id="send2" class="btn btn-default" type="submit">Paper</button>
+						<button id="send3" class="btn btn-default" type="submit">Scissors</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row space-bottom10">
+			<form class="form-inline">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="opponent">Opponent Name</label> <input type="text"
+							value="" name="opponent" id="opponent" class="form-control"
+							disabled>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table id="conversation" class="table table-striped">
+					<thead>
+						<tr>
+							<th width="15%">Match Id</th>
+							<th width="60%">Message</th>
+							<th width="20%">Time</th>
+						</tr>
+					</thead>
+					<tbody id="messages">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
