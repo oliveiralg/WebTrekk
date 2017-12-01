@@ -1,4 +1,4 @@
-# WebTrekk
+# Rock, Paper, Scissors
 
 Title: Waste an hour having fun
 As a frequent games player, I’d like to play rock, paper, scissors So that I can spend an hour of my day
